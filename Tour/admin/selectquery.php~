@@ -1,0 +1,17 @@
+<?php
+
+$dbhost = "localhost";
+$dbuser = "root";
+$dbpass = "shyamala85";
+$conn = mysql_connect($dbhost, $dbuser, $dbpass);
+mysql_select_db('training');
+$sql="SELECT * from employee";
+$var=mysql_query($sql);
+
+while($row=mysql_fetch_array($var))
+{
+    echo "Firstname:".$row['firstname'];
+   echo "Lastname: ".$row['lastname'];
+}
+
+?>

@@ -1,0 +1,89 @@
+<html>
+<head>    <link rel="stylesheet" href="css/style.css"></head>
+<body>
+	<!-- thumbnail image wrapped in a link -->
+     <section class="item1">
+        <a href="#img1">
+          <img src="images/login.png">
+        </a>
+    </section>
+<div class="lightbox" id="img1">
+  	<div class="box">
+	<a class="close" href="#">X</a>
+    <p class="title">Login</p>
+    <div class="content">
+    			<div class="user_login">
+				<form>
+					<label>Email / Username</label>
+					<input type="text" />
+					<br />
+
+					<label>Password</label>
+					<input type="password" />
+					<br />
+
+					<div class="checkbox">
+						<input id="remember" type="checkbox" />
+						<label for="remember">Remember me on this computer</label>
+					</div>
+
+					<div class="action_btns">
+		
+						<div class="one_half last"><a href="#" class="btn btn_red">Let's go</a></div>
+						<div class="one_half last"><a href="#img2" id="register_form" class="btn">Register</a></div>
+					</div>
+				</form>
+
+				<a href="#" class="forgot_password">Forgot password?</a>
+			</div>
+ 
+    </div>
+   
+    <div class="clear"></div>
+  </div>
+</div>    
+
+<div class="lightbox" id="img2">
+  <div class="box">
+	<a class="close" href="#">X</a>
+    <p class="title">Registration</p>
+    <div class="content">
+			<div class="user_register">
+				<form>
+					<label>Full Name</label>
+					<input type="text" />
+					<br />
+
+					<label>Email Address</label>
+					<input type="email" />
+					<br />
+					<label>Locations</label>
+					<select><option>Kodaikanal</option><option>Ooty</option><option>Megamalai</option><option>Yerkadu</option><option>vaalpaarai</option></select>
+
+					<label>Password</label>
+					<input type="password" />
+					<br />
+					<label>Confirm Password</label>
+					<input type="password" />
+					<br />
+					<div class="checkbox">
+						<input id="send_updates" type="checkbox" />
+						<label for="send_updates">Send me occasional email updates</label>
+					</div>
+
+					<div class="action_btns">
+						<div class="one_half"><a href="#img1" class="btn back_btn"><i class="fa fa-angle-double-left"></i> Back</a></div>
+						<div class="one_half last"><a href="#" class="btn btn_red">Register</a></div>
+					</div>
+				</form>
+			</div>
+		
+       
+    </div>
+   
+    <div class="clear"></div>
+  </div>
+</div>  
+
+</body>
+</html>

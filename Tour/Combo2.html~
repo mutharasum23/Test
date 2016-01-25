@@ -1,0 +1,408 @@
+<!doctype html>
+<html>
+  <head>
+   <meta charset="utf-8">
+   <title>Combos</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css"/>
+  <script src="js/jquery-1.10.2.js"></script>
+  <script src="js/jquery-ui.js"></script>
+<style>
+
+</style>
+  <script>
+$(document).ready(function() {
+	var a=0;
+	var b=0;
+	var product1=0,product2=0,product3=0,product4=0,product5=0,product6=0,product7=0,product8=0,product9=0;
+	$("#rem1").attr("disabled","disabled");
+	$("#rem2").attr("disabled","disabled");
+	$("#rem3").attr("disabled","disabled");
+	$("#rem4").attr("disabled","disabled");
+	$("#rem5").attr("disabled","disabled");
+	$("#rem6").attr("disabled","disabled");
+	$("#rem7").attr("disabled","disabled");
+	$("#rem8").attr("disabled","disabled");
+	$("#rem9").attr("disabled","disabled");
+	$( "#comboside .draggable" ).selectable({	
+	 selected: function( event, ui ) {  
+		a++;
+		$('#imgg').remove();
+		var cid=$(this).attr("id");
+		$("#info").find("#aa").text(a);
+		
+		if($("#mainc #" + cid).length == 0) {
+			$('#dropcombo').append($(this).clone().append("<button class='aa'>remove</button>"));
+					}
+		if(cid=="product1") 
+		{			
+			$("#rem1").removeAttr("disabled");			
+			product1++;
+			$("#cou1").text(product1);
+		}
+		if(cid=="product2") 
+		{		
+			$("#rem2").removeAttr("disabled");	
+			product2++;
+			$("#cou2").text(product2);
+		}
+		if(cid=="product3") 
+		{
+			$("#rem3").removeAttr("disabled");
+			product3++;
+			$("#cou3").text(product3);
+		}
+		if(cid=="product4") 
+		{
+			$("#rem4").removeAttr("disabled");
+			product4++;
+			$("#cou4").text(product4);
+		}	
+		if(cid=="product5") 
+		{
+			$("#rem5").removeAttr("disabled");
+			product5++;
+			$("#cou5").text(product5);
+		}
+		if(cid=="product6") 
+		{
+			$("#rem6").removeAttr("disabled");
+			product6++;
+			$("#cou6").text(product6);
+		}
+		if(cid=="product7") 
+		{
+			$("#rem7").removeAttr("disabled");
+			product7++;
+			$("#cou7").text(product7);
+		}
+		if(cid=="product8") 
+		{
+			$("#rem8").removeAttr("disabled");
+			product8++;
+			$("#cou8").text(product8);
+		}
+		if(cid=="product9") 
+		{
+			$("#rem9").removeAttr("disabled");
+			product9++;
+			$("#cou9").text(product9);
+		}
+		if(a==0)
+		{
+			$("#dropcombo").append('<img id="imgg" src="images/Packages.png">');
+		}
+	}
+});
+
+
+$("#info").click(function(e){
+var cid = e.target.id;
+		if(cid=="rem1") 
+		{			
+			product1--;
+			a--;
+			$("#aa").text(a);
+			if(product1==0)
+			{
+				$("#rem1").attr("disabled","disabled");
+				$("#mainc #product1").remove();
+			}
+			$("#cou1").text(product1);
+		}
+		if(cid=="rem2") 
+		{			
+			product2--;
+			a--;
+			$("#aa").text(a);
+			if(product2==0)
+			{
+				$("#rem2").attr("disabled","disabled");
+				$("#mainc #product2").remove();
+			}
+			$("#cou2").text(product2);
+		}
+		if(cid=="rem3") 
+		{
+			product3--;
+			a--;
+			$("#aa").text(a);
+			if(product3==0)
+			{
+				$("#rem3").attr("disabled","disabled");
+				$("#mainc #product3").remove();
+			}
+			$("#cou3").text(product3);
+		}
+		if(cid=="rem4") 
+		{
+			product4--;
+			a--;
+			$("#aa").text(a);
+			if(product4==0)
+			{
+				$("#rem4").attr("disabled","disabled");
+				$("#mainc #product4").remove();
+			}
+			$("#cou4").text(product4);
+		}	
+		if(cid=="rem5") 
+		{
+			product5--;
+			a--;
+			$("#aa").text(a);
+			if(product5==0)
+			{
+				$("#rem5").attr("disabled","disabled");
+				$("#mainc #product5").remove();
+			}
+			$("#cou5").text(product5);
+		}
+		if(cid=="rem6") 
+		{
+			product6--;
+			a--;
+			$("#aa").text(a);
+			if(product6==0)
+			{
+				$("#rem6").attr("disabled","disabled");
+				$("#mainc #product6").remove();
+			}
+			$("#cou6").text(product6);
+		}
+		if(cid=="rem7") 
+		{
+			product7--;
+			a--;
+			$("#aa").text(a);
+			if(product7==0)
+			{
+				$("#rem7").attr("disabled","disabled");
+				$("#mainc #product7").remove();
+			}
+			$("#cou7").text(product7);
+		}
+		if(cid=="rem8") 
+		{
+			product8--;
+			a--;
+			$("#aa").text(a);
+			if(product8==0)
+			{
+				$("#rem8").attr("disabled","disabled");
+				$("#mainc #product8").remove();
+			}
+			$("#cou8").text(product8);
+		}
+		if(cid=="rem9") 
+		{
+			product9--;
+			a--;
+			$("#aa").text(a);
+			if(product9==0)
+			{
+				$("#rem9").attr("disabled","disabled");
+				$("#mainc #product9").remove();
+			}
+			$("#cou9").text(product9);
+		}
+});
+
+$(document).on('click', '#mainc button', function(){
+var aid=$(this).parent().attr("id")
+$(this).parent().remove();
+		if(aid=="product1") 
+		{	
+			a=a-product1;	
+			$("#aa").text(a);	
+			product1=0;
+			$("#cou1").text(product1);
+			$("#rem1").attr("disabled","disabled");
+		}
+		if(aid=="product2") 
+		{		
+			a=a-product2;	
+			$("#aa").text(a);	
+			product2=0;
+			$("#cou2").text(product2);
+			$("#rem2").attr("disabled","disabled");
+		}
+		if(aid=="product3") 
+		{
+			a=a-product3;	
+			$("#aa").text(a);
+			product3=0;
+			$("#cou3").text(product3);
+			$("#rem3").attr("disabled","disabled");
+		}
+		if(aid=="product4") 
+		{
+			a=a-product4;	
+			$("#aa").text(a);
+			product4=0;
+			$("#cou4").text(product4);
+			$("#rem4").attr("disabled","disabled");
+		}	
+		if(aid=="product5") 
+		{
+			a=a-product5;	
+			$("#aa").text(a);			
+			product5=0;
+			$("#cou5").text(product5);
+			$("#rem5").attr("disabled","disabled");
+	
+		}
+		if(aid=="product6") 
+		{
+			a=a-product6;	
+			$("#aa").text(a);
+			product6=0;
+			$("#cou6").text(product6);
+			$("#rem6").attr("disabled","disabled");
+		}
+		if(aid=="product7") 
+		{
+			a=a-product7;	
+			$("#aa").text(a);
+			product7=0;
+			$("#cou7").text(product7);
+			$("#rem7").attr("disabled","disabled");
+		}
+		if(aid=="product8") 
+		{
+			a=a-product8;	
+			$("#aa").text(a);
+			product8=0;
+			$("#cou8").text(product8);
+			$("#rem8").attr("disabled","disabled");
+		}
+		if(aid=="product9") 
+		{
+			a=a-product9;	
+			$("#aa").text(a);
+			product9=0;
+			$("#cou9").text(product9);
+		}
+$("#info").find("#aa").text(a);
+if(a==0)
+{
+$("#dropcombo").append('<img id="imgg" src="images/Packages.png">');
+}
+});
+});
+/*
+$(".draggable").selectable();
+ $('#btn-add').click(function(){
+		$('.draggable .ui-selected ').each( function() {
+			alert($(this).src);
+			$('#mainc').append($(this));
+			$("#imgg").remove();
+		});
+	});
+	$('#btn-remove').click(function(){
+		$('#mainc').each( function() {
+			$('.draggable .ui-selected').append($(this));
+		});
+	});
+
+});*/
+/*function aa(){
+alert();
+}*/
+  </script>
+<body>
+
+<!--Header starts-->
+<div id="header">
+	<div id="logo"><a href="index.html"><img src="images/logo.png"></a></div>
+	<div id="menu">
+		<ul class="shadow">
+		  <li><a href="index.html">Home</a></li>
+                  <li><a href="javascript:void(0);">About us</a></li>
+                  <li><a href="Combo.html">Combos</a></li>
+                  <li><a href="javascript:void(0);">Contact us</a></li>
+		</ul>
+	</div>
+</div>
+<!--Header Ends-->
+<div id="comboside">
+<h3> Click packages to add in combo</h3>
+				<div id="product1" class="draggable" name="meenakshi">
+					<a href="javascript:void(0)"><img src="images/shop/tp1.png"></a>
+					<div id="name">Meenakshi amman temple</div>
+					<div id="price">Package:&#8377; 3200</div>
+					<div id="social">Duration:1 day</div>
+				</div>
+				<div class="draggable" id="product2">
+					<a href="javascript:void(0)"><img src="images/shop/tp2.png"></a>
+					<div id="name">Megha malai</div>
+					<div id="price">Package:&#8377;2500</div>
+					<div id="social">Duration:2 day</div>
+				</div>
+				<div class="draggable" id="product3">
+					<a href="javascript:void(0)"><img src="images/shop/tp3.png"></a>
+					<div id="name">Mahabalipuram</div>
+					<div id="price">Package:&#8377;5000</div>
+					<div id="social">Duration:4 days</div>
+				</div>
+	
+			
+				<div  class="draggable" id="product4">
+					<a href="javascript:void(0)"><img src="images/shop/tp4.png"></a>
+					<div id="name">Kodaikanal</div>
+					<div id="price">Package:&#8377;320</div>
+					<div id="social">Duration:4 days</div>
+				</div>
+				<div class="draggable" id="product5">
+					<a href="javascript:void(0)"><img src="images/shop/tp5.png"></a>
+					<div id="name">Ooty</div>
+					<div id="price">Packagar:&#8377;320</div>
+					<div id="social">Duration:4 Days</div>
+				</div>
+				<div class="draggable" id="product6">
+					<a href="javascript:void(0)"><img src="images/shop/tp6.png"></a>
+					<div id="name">Pragahdeeswara temple</div>
+					<div id="price">Package:&#8377;320</div>
+					<div id="social">Duration:2 days</div>
+				</div>
+				<div class="draggable" id="product7">
+					<a href="javascript:void(0)"><img src="images/shop/tp7.png"></a>
+					<div id="name">Vaalparai</div>
+					<div id="price">Package:&#8377;320</div>
+					<div id="social">Duration:3 days</div>
+				</div>
+				<div class="draggable" id="product8">
+				<a href="javascript:void(0)">	<img src="images/shop/tp8.png"></a>
+					<div id="name">Yercaud</div>
+					<div id="price">Package:&#8377;320</div>
+					<div id="social">Duration:3 days</div>
+				</div>
+				<div  class="draggable" id="product9">
+				<a href="javascript:void(0)">	<img src="images/shop/tp9.png"></a>
+					<div id="name">Kanniyakumari</div>
+					<div id="price">Package:&#8377;320</div>
+					<div id="social">Duration:3 days</div>
+				</div> 
+</div>
+<div id="mainc">
+	<div id="dropcombo">
+		<h3 id="he">Click to select packages</h3>
+		<img id="imgg" src="images/Packages.png">
+	</div>
+</div>
+<div id="info">
+you have selected <p id="aa">0</p> packages
+<div>No.of Packages selected in Meeakshi temple: <span id="cou1">0</span><button id="rem1">Remove</button></div>
+<div>No.of Packages selected in Megha malai: <span id="cou2">0</span><button id="rem2">Remove</button></div>
+<div>No.of Packages selected in Mahabalipuram:<span id="cou3">0</span><button id="rem3">Remove</button></div>
+<div>No.of Packages selected in Kodaikanal:<span id="cou4">0</span><button id="rem4">Remove</button></div>
+<div>No.of Packages selected in Ooty:<span id="cou5">0</span><button id="rem5">Remove</button></div>
+<div>No.of Packages selected in Pragahdeeswara temple:<span id="cou6">0</span><button id="rem6">Remove</button></div>
+<div>No.of Packages selected in Vaalparai:<span id="cou7">0</span><button id="rem7">Remove</button></div>
+<div>No.of Packages selected in Yercaud:<span id="cou8">0</span><button id="rem8">Remove</button></div>
+<div>No.of Packages selected in Kanniyakumari:<span id="cou9">0</span><button id="rem9">Remove</button></div>
+</div>
+<div id="buybutton">
+	<a href="#">Book Now</a>
+	</div>
+</body>
+</html>

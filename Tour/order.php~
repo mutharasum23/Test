@@ -1,0 +1,37 @@
+
+<style>
+#productorder{
+margin-left:200px;
+margin-top:50px;
+float:left;
+}
+#ri{
+margin-top:200px;
+padding:10px;
+font-size:20px;
+}
+#name{
+text-align:center;
+font-size:40px;
+margin-bottom:30px;
+}
+#price{
+margin:20px;
+}
+#duartion{
+margin:20px;
+}
+</style>
+<?php 
+$pr=$_GET["id"];
+include("header.php");
+include("ret_product.php");
+echo "<div id=productorder>";
+echo "<div id='name'>".$pname[$pr]."</div>";
+echo "<a href='javascript:void(0)'><img src='admin/".$path[$pr]."'></a></div>";
+echo "<div id='ri'>";
+echo " <div id='price'>Package price:&#8377;".$pprice[$pr]."</div>";
+echo "<div id='social'>Duration:".$duration[$pr]."Days</div> ";
+echo "<a href='bookorder.php?id=".$inc1."&pid".$productid[$pr]."'>Booknow</a>";  /* TO pass the values to the order page */
+echo "</div>";
+?>

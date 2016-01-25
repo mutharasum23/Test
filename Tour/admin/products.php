@@ -1,0 +1,47 @@
+<?php
+include("../connection.php");
+session_start();
+if(!isset($_SESSION['user']))
+{
+$_SESSION["message"]="Please signin to continue";
+header("Location:index.php");
+
+}
+include("header.php");
+?>
+<style>
+
+</style>
+<body>
+<div>
+<div id="submenu">
+<div class="aa"><a href="addnew.php" class="pfun">Add product</a></div>
+
+<div class="aa"><a href="editproduct.php" class="pfun">Edit product</a></div>
+
+<div class="aa"><a href="products.php" class="pfun">View product</a></div>
+</div>
+<div id="content1">
+<h1>List of Products</h1>
+<?php
+include("../connection.php");
+$select_path="select * from products";
+$var=mysql_query($select_path);
+$inc=0;
+echo "<table border=1 cellspacing='5px'><tr> <th>ProductID</th> <th>Name</th>  <th>Price</th> <th>Location</th> <th>Duration</th> </tr>";
+while($row=mysql_fetch_array($var))
+{
+    $pid[$inc]=$row["product_id"];
+    $pname[$inc]=$row["product_name"];
+    $pprice[$inc]=$row["product_price"];
+    $plocation[$inc]=$row["location"];
+    $path[$inc]=$row["product_img"];
+    $duration[$inc]=$row["duration"];
+       echo "<tr><td>".$pid[$inc]."</td><td>".$pname[$inc]."</td><td>".$pprice[$inc]."</td><td>".$plocation[$inc]."</td><td>".$duration[$inc]."</td></tr>";
+}
+?>
+</div>
+</div>
+</body>
+</html>
+

@@ -1,0 +1,29 @@
+<?php 
+	include("../connection.php");
+	session_start();
+echo "ss";
+	if(isset($_POST['login']))
+	{  	
+		$sql= "SELECT * FROM users,admin WHERE users.user_id=admin.user_id and admin_id='".trim($_POST['uname'])."' and pwd='".trim($_POST['pwd'])."'"; 
+		$res = mysql_query($sql); 
+		echo mysql_num_rows($res);
+		if(mysql_num_rows($res)>0)	
+		{ 
+			$row= mysql_fetch_assoc($res);  
+			$_SESSION['user'] =$row['name'];
+			$_SESSION['admin']=$row['adminid'];  
+			if($_POST['autologin']==1)
+			{
+				setcookie ("auto", $_SESSION['aname'], time() + 120);
+			}
+			unset($_SESSION["message"]);
+			echo $_SESSION["admin"];
+			header("Location:dashboard.php");
+		}
+		else{ 
+			$_SESSION["message"]="Enter the correct credentials";
+			die('Could not enter data: ' . mysql_error());
+			exit; 
+		} 
+	} 
+?>

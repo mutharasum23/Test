@@ -1,0 +1,48 @@
+
+#topbar {
+    background-color: #008cd2;
+    height: 75px;
+    width: 100%;
+}
+
+
+#lsidebar{background-color: #009CEC;height:900px;width:280px; float:left;}
+#heading{float: left; margin-left: 10px;color: aliceblue;}
+#empname{float:right; margin-right: 110px;color: aliceblue;}
+
+ .round {
+            border: 1px solid white;
+        height: 150px;
+        width: 150px;
+        display: block;
+        border-radius: 75px;
+        box-shadow: 1px 1px 1px rgba(0,0,0, 0.7);
+        background: rgba(0, 0, 0, 0.2);
+        margin: 50px
+
+        }
+        .round img {
+        border-radius: 71px;
+        width: 140px;
+        height: 140px;
+        margin: 6px;
+        }
+#change{
+    float: left;
+       margin-left: 10px;
+}
+#name,#position,#tw,#ln,#gp{font-family: Georgia, serif; text-align: center;}
+#fb{ font-size:14px; color:antiquewhite;}
+
+#cheader{ font-size: 30px;}
+
+#content {
+    float: right;
+    margin-top: 100px;
+    width: 978px;
+}
+#container{}
+
+#intro{padding-top: 30px;}
+#intro p{ text-indent: 50px;}
+

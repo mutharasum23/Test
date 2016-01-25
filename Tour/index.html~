@@ -1,0 +1,207 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Indo-Tourism</title>
+    <link rel="stylesheet" href="css/bjqs.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- load jQuery and the plugin -->
+    <script src="js/jquery-1.7.1.min.js"></script>
+    <script src="js/bjqs-1.3.min.js"></script>
+      <script>
+          function logincheck()
+          {
+              if(document.getElementById("uname").value.match(document.getElementById("pwd").value))
+              {
+                    window.open("profile.html");
+              }
+              else{
+                alert("invalid user name or password");
+            }
+          }
+      </script>
+  </head>
+  <body>
+<div id="main">
+<!--Header starts-->
+<div id="header">
+	<div id="logo"><a href="index.html"><img src="images/logo.png"></a></div>
+	   <div id="menu">
+		<ul class="shadow">
+		  <li><a href="index.html">Home</a></li>
+                  <li><a href="javascript:void(0);">About us</a></li>
+                  <li><a href="Combo.html">Combos</a></li>
+                  <li><a href="javascript:void(0);">Contact us</a></li>
+                  <li><a href="#img1"><img src="images/login.png"></a></li>
+		</ul>
+	</div>
+</div>
+<!--Header Ends-->
+<div id="gallery">
+<div class="lightbox" id="img1">
+  	<div class="box">
+	 <a class="close" href="#">X</a>
+     <p class="title">Login</p>
+       <div class="content">
+    			<div class="user_login">
+				<form name="login" action="login.php" method="post">
+					<label>Email / Username</label>
+					<input type="text" name ="uname"/>
+					<br />
+
+					<label>Password</label>
+					<input type="password" name="pwd" />
+					<br />
+
+					<div class="checkbox">
+						<input id="remember" type="checkbox" />
+						<label for="remember">Remember me on this computer</label>
+					</div>
+
+					<div class="action_btns">
+		
+						<div class="one_half"><a href="#" class="btn btn_red" id="letsgo" onclick="logincheck();">Let's go</a></div>
+						<a href="#" class="forgot_password">Forgot password?</a>
+						<div class="one_half last"><a href="#img2" id="register_form" class="btn">Register</a></div>
+					</div>
+				</form>
+
+				
+			</div>
+    </div>
+    <div class="clear"></div>
+  </div>
+</div>    
+
+<div class="lightbox" id="img2">
+  <div class="box">
+	<a class="close" href="#">X</a>
+    <p class="title">Registration</p>
+    <div class="content">
+			<div class="user_register">
+				<form action="register.php" method="post">
+					<label>Full name</label>
+					<input type="text" name="fname" minlength="2" maxlength="50" required/>
+					<br />
+					<label>Username</username><br />
+					<input name="username" minlength="4" maxlength="15" required /><br />
+					<label>Email address</label>
+					<input type="email" name="email" required />
+					<br/>
+					<label>Password</label>
+					<input type="password" name="password" required/>
+					<br />
+					<label>Confirm password</label>
+					<input type="password" name="cpassword" required />
+					<br />
+					
+					<div class="checkbox">
+						<input id="send_updates" type="checkbox" name="emailupdate" required />
+						<label for="send_updates">Send me occasional email updates</label>
+					</div>
+
+					<div class="action_btns">
+						<div class="one_half1"><input type="submit" name="register" value="Register"  class="btn1 btn_red1"></div>
+						<div class="one_half1 last"><a href="#img1" class="btn1 back_btn"><i class="fa fa-angle-double-left"></i> Back</a></div>
+						
+					</div>
+				</form>
+			</div>
+		
+       
+    </div>
+   
+    <div class="clear"></div>
+  </div>
+</div>  
+
+<div class="lightbox" id="img3">
+  	<div class="box">
+	 <a class="close" href="#">X</a>
+     <p class="title">Our Video</p>
+       <div class="content">
+	<video width="500px" controls>
+  <source src="video.mp4" type="video/mp4">
+  <source src="video.ogg" type="video/ogg">
+ 
+</video>
+       </div>
+    <div class="clear"></div>
+  </div>
+</div>    
+
+
+</div>
+<!-- start Slider -->
+<div id="slider">
+      <div id="banner-slide">
+        <ul class="bjqs">
+          <li><img src="images/banner01.png" title=""></li>
+	 <li><img src="images/banner03.png" title="Mahabalipuram, also known as Mamallapuram is a town in Kancheepuram district in the Indian state of Tamil Nadu. It is around 60 km south from the city of Chennai. It is an ancient historic town and was a bustling seaport during the time of Periplus (1st century CE) and Ptolemy (140 CE). Ancient Indian traders who went to countries of South East Asia sailed from the seaport of Mahabalipuram."></li>
+          <li><video width="1280px" height="400px">
+  		<source src="video.mp4" type="video/mp4">
+  		<source src="video.ogg" type="video/ogg">
+		</video></li>
+          <li><img title="Video with content"><video controls width="1280px" height="400px">
+  		<source src="video.mp4" type="video/mp4">
+  		<source src="video.ogg" type="video/ogg">
+		</video></li>
+        </ul>
+      </div>
+</div>
+<div id="places">
+	<h4>Places you must visit in your life time</h4><a href="shop.html">
+	<div id="firstrow">
+		<img src="images/banner01.png"><img src="images/banner02.jpg"><img src="images/banner03.png"><img src="images/banner04.jpg"><img src="images/banner05.jpeg">
+	</div>
+	<div id="secondrow">
+		<img src="images/banner06.jpg"><img src="images/banner07.jpg"><img src="images/banner08.jpg"><img src="images/banner09.jpg"><img src="images/banner01.jpg">
+	</div></a>
+</div>
+<!-- end Slider -->
+<div id="bodytext">We've since expanded our life list to 43 sites around the world</div>
+<!-- Icons before footer -->	
+<div id="icons">
+<a href="javascript:void(0);"><img src="images/world.png"></a><a href="shop.html"><img src="images/bag.png"></a><a href="javascript:void(0);"></a><a href="gallery.html"><img src="images/photo.png"></a><a href="#img3"><img src="images/search.png"></a></div>
+	<div id="captions"><ul><li>World Sites</li><li>Shopping</li><li>Photography</li><li>Our Video</li><ul></div>
+<!-- end of icons -->
+<!-- Footer -->
+	<div id="footer"><p>Designed by ABC</p></div>
+<!-- end of footer -->
+ </div>     
+
+
+<div>
+            <a class="twitter-timeline"  href="https://twitter.com/Dinamalar" data-widget-id="624136935011803136">Tweets by @Dinamalar</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+  
+</div>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_IN/sdk.js#xfbml=1&version=v2.4";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<div class="fb-like" data-href="https://facebook.com/lovemaduraicity" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+      <!-- script for slider -->
+      <script class="secret-source">
+        jQuery(document).ready(function($) {
+          
+          $('#banner-slide').bjqs({
+            animtype      : 'fade',
+            animduration : 550,
+            animspeed : 2000,
+            height        : 535,
+            width         : 1280,
+            responsive    : true,
+            randomstart   : true,
+            // Show individual slide markers
+            showcontrols : true,
+          });
+          
+        });
+      </script>
+  </body>
+</html>

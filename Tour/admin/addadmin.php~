@@ -1,0 +1,49 @@
+<?php include("header.php");
+include("../connection.php");
+?>
+<div id="submenu">
+<div class="aa"><a href="addadmin.php" class="pfun">Addnew admin</a></div>
+
+<div class="aa"><a href="admins.php" class="pfun">View admin</a></div>
+
+<div class="aa"><a href="editadmin.php" class="pfun">Edit admin</a></div>
+</div>	
+
+<div id="content1">
+<?php if(isset($_SESSION['message'])){ echo $_SESSION['message'];} ?>
+<div class="user_login">
+			<form name="login" action="makeadmin.php" method="post" name="login">
+				Select the product <select name="uid"  id="pid">
+<option>Select</option>
+<?php 
+$select_path="select user_id from users";
+$var=mysql_query($select_path);
+$inc=0;
+while($row=mysql_fetch_array($var))
+{
+    echo "<option value=".$row["user_id"].">".$row["user_id"]."</option>";
+}
+?>
+</select>
+
+					<br />
+					<label>Give Admin-ID</label>
+					<input type="text" name="adminid" />
+					<br />
+					<label>Give admin Password</label>
+					<input type="password" name="pwd" />
+					<br />
+
+					<div class="action_btns">
+		
+						<div class="one_half"><input type="submit" name="makeadmin" class="btn btn_red" value="Make admin"></div>
+						<a href="#" class="forgot_password">Forgot password?</a>
+					
+					</div>
+				</form>
+
+				
+			</div>
+
+</div>
+</html>

@@ -1,0 +1,35 @@
+<?php 
+	include("connection.php");
+	session_start();
+	if(isset($_POST['login']))
+	{  	
+		$sql= "SELECT * FROM users WHERE user_id='".trim($_POST['uname'])."' and password='".trim(md5($_POST['pwd']))."'"; 
+		$res = mysql_query($sql); 
+		echo mysql_num_rows($res);
+		if(mysql_num_rows($res)>0)	
+		{ 
+			$row= mysql_fetch_assoc($res); 
+			$mail= $row['email']; 
+			$_SESSION['username'] =$row['user_id'];  
+			$_SESSION['name']=$row['name'];
+			$_SESSION['mailid'] =$row['email'];  
+			$_SESSION['name']=$row['name'];
+			$_SESSION['dob']=$row['DOB'];
+			$_SESSION['phone']=$row['phone'];
+			$_SESSION['address']=$row['address'];
+			$_SESSION['city']=$row['city'];
+			$_SESSION['state']=$row['state'];
+			$_SESSION['country']=$row['country'];
+			if($_POST['autologin']==1)
+			{
+				setcookie ("auto", $_SESSION['uname'], time() + 120);
+			}
+			unset($_SESSION["error"]);
+			header("Location:index.php");
+		}
+		else{ 
+			$_SESSION["error"]="Your credentials are wrong";
+			header("Location:index.php"); 
+		} 
+	} 
+?>

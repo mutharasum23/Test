@@ -1,0 +1,246 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+  
+    <title>Gallery </title>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+<script>
+window.onclick=function(e){
+var evt = e.target;
+var image=evt
+if(image.src.match("images/thumb.png")){
+evt.src="images/thumbon.png";
+}
+else if(image.src.match("images/thumbon.png")){
+evt.src="images/thumb.png";
+}
+}
+</script>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+</head>
+<body>
+
+
+<!--Header starts-->
+<div id="header">
+	<div id="logo"><a href="index.html"><img src="images/logo.png"></a></div>
+	<div id="menu">
+		<ul class="shadow">
+		  <li><a href="index.html">Home</a></li>
+                  <li><a href="javascript:void(0);">About us</a></li>
+                  <li><a href="Combo.html">Combos</a></li>
+                  <li><a href="javascript:void(0);">Contact us</a></li>
+		</ul>
+	</div>
+</div>
+
+<!--Header Ends-->
+<div id="side">
+
+<h3>Our Locations</h3>
+<ul>
+<li class="fa fa-plane"><a href="javascript:void(0);">Kodaikanal</a></li>
+<li class="fa fa-plane"><a href="javascript:void(0);">Ooty</a></li>
+<li class="fa fa-plane"><a href="javascript:void(0);">Yerkadu</a></li>
+<li class="fa fa-plane"><a href="javascript:void(0);">Vaalparai</a></li>
+<li class="fa fa-plane"><a href="javascript:void(0);">Megamalai</a></li>
+<li class="fa fa-plane"><a href="javascript:void(0);">Madurai</a></li>
+<li class="fa fa-plane"><a href="javascript:void(0);">Kanchipuram</a></li>
+<li class="fa fa-plane"><a href="javascript:void(0);">Kanniyakumari</a></li>
+
+</div>
+<div id="gal1">
+<!-- Lightbox usage markup -->
+<div id="products">
+			<div id="productrow">
+				<div id="product1">
+					<a href="#img1" ><img src="images/shop/tp1.png"></a>
+					<div id="name">Meenakshi amman temple</div>
+					<section id="social"><a href="javascript:void(0);"><img src="images/thumb.png"></a><img src="images/fb.png"><img src="images/tw.gif"><img src="images/googleplus.png"></section>
+				</div>
+				<div id="product2">
+					<a href="#img2"><img src="images/shop/tp2.png"></a>
+					<div id="name">Megha malai</div>
+					<section id="social"><a href="javascript:void(0);"><img src="images/thumb.png"></a><img src="images/fb.png"><img src="images/tw.gif"><img src="images/googleplus.png"></section>
+				</div>
+				<div id="product3">
+					<a href="#img3"><img src="images/shop/tp3.png"></a>
+					<div id="name">Mahabalipuram</div>
+						<section id="social"><a href="javascript:void(0);"><img src="images/thumb.png"></a><img src="images/fb.png"><img src="images/tw.gif"><img src="images/googleplus.png"></section>
+				</div>
+	</div>
+			<div id="productrow2">
+				<div id="product4">
+					<a href="#img4"><img src="images/shop/tp4.png"></a>
+					<div id="name">Kodaikanal</div>
+						<section id="social"><a href="javascript:void(0);"><img src="images/thumb.png"></a><img src="images/fb.png"><img src="images/tw.gif"><img src="images/googleplus.png"></section>
+				</div>
+				<div id="product5">
+					<a href="#img5"><img src="images/shop/tp5.png"></a>
+					<div id="name">Ooty</div>
+						<section id="social"><a href="javascript:void(0);"><img src="images/thumb.png"></a><img src="images/fb.png"><img src="images/tw.gif"><img src="images/googleplus.png"></section>
+				</div>
+				<div id="product6">
+					<a href="#img6"><img src="images/shop/tp6.png"></a>
+					<div id="name">Pragahdeeswara temple</div>
+						<section id="social"><a href="javascript:void(0);"><img src="images/thumb.png"></a><img src="images/fb.png"><img src="images/tw.gif"><img src="images/googleplus.png"></section>
+				</div>
+	</div>
+			<div id="productrow3">
+				<div id="product7">
+					<a href="#img7"><img src="images/shop/tp7.png"></a>
+					<div id="name">Vaalparai</div>
+						<section id="social"><a href="javascript:void(0);"><img src="images/thumb.png"></a><img src="images/fb.png"><img src="images/tw.gif"><img src="images/googleplus.png"></section>
+				</div>
+				<div id="product8">
+				<a href="#img8">	<img src="images/shop/tp8.png"></a>
+					<div id="name">Yercaud</div>
+					<section id="social"><a href="javascript:void(0);"><img src="images/thumb.png"></a><img src="images/fb.png"><img src="images/tw.gif"><img src="images/googleplus.png"></section>
+				</div>
+				<div id="product9">
+				<a href="#img9">	<img src="images/shop/tp9.png"></a>
+					<div id="name">Kanniyakumari</div>
+						<section id="social"><a href="javascript:void(0);"><img src="images/thumb.png"></a><img src="images/fb.png"><img src="images/tw.gif"><img src="images/googleplus.png"></section>
+				</div>
+	</div> 
+</div>
+
+<!-- lightbox container hidden with CSS -->
+<div class="lightbox" id="img1">
+  <div class="box">
+	<a class="close" href="#">X</a>
+    <p class="title">Meenakshi Temple Madurai</p>
+    <div class="content">
+    	<img src="images/banner01.png"> 
+        <p class="desc">Meenakshi Amman Temple (also called: Meenakshi Sundareswarar Temple, Tiru-aalavaai and Meenakshi Amman Kovil) is a historic Hindu temple located on the southern bank of the Vaigai River in the temple city of Madurai, Tamil Nadu, India. It is dedicated to Parvati, known as Meenakshi, and her consort, Shiva, here named Sundareswarar. The temple forms the heart and lifeline of the 2,500 year old city of Madurai and is a significant symbol for the Tamil people, mentioned since antiquity in Tamil literature though the present structure was built between 1623 and 1655 CE.</p>
+    </div>
+    <a class="prev" href="#img3">Previous</a>
+    <a class="next" href="#img2">Next</a>
+    <div class="clear"></div>
+  </div>
+</div>    
+    
+<div class="lightbox" id="img2">
+  <div class="box">
+	<a class="close" href="#">X</a>
+    <p class="title">Megamalai</p>
+    <div class="content">
+    	<img src="images/banner02.jpg"> 
+        <p class="desc">Meghamalai,(மேகமலை) popularly called High Wavy Mountains, is a cool and misty mountain range situated in the Western Ghats in Theni district, Tamil Nadu, near Kumaly Idukki District, South India. It is a place of natural beauty dotted with cardamom plantations and tea estates. The place is situated at an elevation of 1,500 m above sea level and it is rich in flora and fauna. This area, now mostly planted with tea, includes Cloudlands, Highwavys and Manalaar estates, the access to which is now largely restricted. It still includes large untouched remnants of evergreen forest.</p>
+    </div>
+    <a class="prev" href="#img2">Previous</a>
+    <a class="next" href="#img3">Next</a>
+    <div class="clear"></div>
+  </div>
+</div>  
+
+<div class="lightbox" id="img3">
+  <div class="box">
+	<a class="close" href="#">X</a>
+    <p class="title">Mahabalipuram</p>
+    <div class="content">
+    	<img src="images/banner03.png"> 
+        <p class="desc">Mahabalipuram, also known as Mamallapuram is a town in Kancheepuram district in the Indian state of Tamil Nadu. It is around 60 km south from the city of Chennai. It is an ancient historic town and was a bustling seaport during the time of Periplus (1st century CE) and Ptolemy (140 CE). Ancient Indian traders who went to countries of South East Asia sailed from the seaport of Mahabalipuram.</p>
+    </div>
+    <a class="prev" href="#img2">Previous</a>
+    <a class="next" href="#img4">Next</a>
+    <div class="clear"></div>
+  </div>
+</div>   
+
+<div class="lightbox" id="img4">
+  <div class="box">
+	<a class="close" href="#">X</a>
+    <p class="title">kodaikanal</p>
+    <div class="content">
+    	<img src="images/banner04.jpg"> 
+        <p class="desc">Kodaikanal is a city in the hills of the Dindigul district in the state of Tamil Nadu, India.[2] Its name in the Tamil language means "The Gift of the Forest".[3] Kodaikanal is referred to as the "Princess of Hill stations" and has a long history as a retreat and popular tourist destination.
+
+</p>
+    </div>
+    <a class="prev" href="#img3">Previous</a>
+    <a class="next" href="#img5">Next</a>
+    <div class="clear"></div>
+  </div>
+</div>
+<div class="lightbox" id="img5">
+  <div class="box">
+	<a class="close" href="#">X</a>
+    <p class="title">Ooty</p>
+    <div class="content">
+    	<img src="images/banner05.jpeg"> 
+        <p class="desc">Udhagamandalam (sometimes Ootacamund (About this sound listen (help·info))), sometimes abbreviated Udhagai and better known as Ooty , is a town, a municipality, and the district capital of the Nilgiris district in the Indian state of Tamil Nadu. It is located 80 km north of Coimbatore. It is a popular hill station located in the Nilgiri Hills. Originally occupied by the Todas, the area came under the rule of the East India Company at the end of the 18th century. Today, the town's economy is based on tourism and agriculture, along with manufacture of medicines and photographic film.</p>
+    </div>
+    <a class="prev" href="#img4">Previous</a>
+    <a class="next" href="#img6">Next</a>
+    <div class="clear"></div>
+  </div>
+</div>
+<div class="lightbox" id="img6">
+  <div class="box">
+	<a class="close" href="#">X</a>
+    <p class="title">Brahadeeswarar Temple</p>
+    <div class="content">
+    	<img src="images/banner06.jpg"> 
+        <p class="desc">The Peruvudaiyar Kovil (Tamil: தஞ்சைப் பெருவுடையார் கோயில்) is a Hindu temple dedicated to Shiva that is located in the city of Thanjavur in the Indian state of Tamil Nadu. It is an important example of Tamil architecture achieved during the Chola dynasty. It is also known as Periya Kovil,[1] Brihadeshwara Temple, RajaRajeswara Temple and Rajarajeswaram,[2] It is one of the largest temples in India[3] and one of India's most prized architectural sites. Built by emperor Raja Raja Chola I and completed in 1010 AD,[4] Peruvudaiyaar Temple, also popularly known as the 'Big Temple', turned 1000 years old in 2010. The temple is part of the UNESCO World Heritage Site known as the "Great Living Chola Temples".[5]</p>
+    </div>
+    <a class="prev" href="#img5">Previous</a>
+    <a class="next" href="#img7">Next</a>
+    <div class="clear"></div>
+  </div>
+</div> 
+<div class="lightbox" id="img7">
+  <div class="box">
+	<a class="close" href="#">X</a>
+    <p class="title">Vaalparai</p>
+    <div class="content">
+    	<img src="images/banner07.jpg"> 
+        <p class="desc">Valparai is a Taluk and hill station in the Coimbatore district of Tamil Nadu,India. It is located 3,500 feet above sea level on the Anaimalai Hills range of the Western Ghats, at a distance of 100 km from Coimbatore and 65 km from Pollachi.There are 40 hairpin bends on the way up to Valparai from Azhiyar. While major portions of the land are owned by private tea companies, large forest areas continue to be out of bounds.[2] The Government of Tamil Nadu in collaboration with ITDC initiated Tourism promotion through infrastructure development including Resort hotels and Amusement parks to attract tourists.[3] As of 2011, the town had a population of 70,859.</p>
+    </div>
+    <a class="prev" href="#img6">Previous</a>
+    <a class="next" href="#img8">Next</a>
+    <div class="clear"></div>
+  </div>
+</div>
+<div class="lightbox" id="img8">
+  <div class="box">
+	<a class="close" href="#">X</a>
+    <p class="title">Yercaud</p>
+    <div class="content">
+    	<img src="images/banner08.jpg"> 
+        <p class="desc">Yercaud is a hill station in Salem District, in Tamil Nadu, India. It is located in the Shevaroys range of hills in the Eastern Ghats; the Yercaud hill area is called the Shevaroy Hills. It is situated at an altitude of 1515 metres (4970 ft) above sea level, and the highest point in Yercaud is the Servarayan temple, at 5,326 feet (1,623 m). It is so named owing to the abundance of trees categorised as a forest near the lake, the name signifying Lake Forest.[1] As a popular tourist destination, Yercaud [2] is also called as Jewel of the South.[3] Yercaud is connected to the city of Salem, Tamil Nadu through a Highway of 28 km. The temperature never rises above 29 °C (84 °F) or goes below 13 °C (55 °F). Coffee and citrus fruits, most notably oranges, are grown in abundance, as well as bananas, pears and jackfruit. Scenically, Yercaud is as enchanting and picturesque as the hill stations on the eastern ghats and trekking here can be one of the most pleasurable experiences.</p>
+    </div>
+    <a class="prev" href="#img7">Previous</a>
+    <a class="next" href="#img9">Next</a>
+    <div class="clear"></div>
+  </div>
+</div>
+<div class="lightbox" id="img9">
+  <div class="box">
+	<a class="close" href="#">X</a>
+    <p class="title">Kanniyakumari</p>
+    <div class="content">
+    	<img src="images/banner09.jpg"> 
+        <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.Text Modal Window Nullam at volutpat ipsum. Nullam nec posuere ante. Nulla molestie ac odio sed malesuada.Text Modal Window With a Video Ut dapibus odio eget vestibulum condimentum.</p>
+    </div>
+    <a class="prev" href="#img8">Previous</a>
+    <a class="next" href="#img1">Next</a>
+    <div class="clear"></div>
+  </div>
+</div>
+
+</div>
+<div class="fb-comments" data-href="https://www.facebook.com/LoveMaduraiCity" data-numposts="5"></div>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Combos</title>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<style>
+
+</style>
+  <script>
+$(document).ready(function() {
+var a=0;
+	$( "#comboside .draggable" ).selectable({	
+	  selected: function( event, ui ) {  
+	a++;
+	$('#imgg').remove();
+	 $("#info").find("p").text(a);
+	$('#dropcombo').append($(this).clone().append("<button class='aa'>remove</button>"));
+	$(this).selectable("disable");
+	if(a==0)
+{
+$("#dropcombo").append('<img id="imgg" src="images/Packages.png">');
+}
+	}
+});
+$(document).on('click', 'button', function(){
+a--;
+var aid=$(this).parent().attr("id")
+$(this).parent().remove();
+$("#"+aid).selectable("enable");
+ $("#info").find("p").text(a);
+if(a==0)
+{
+$("#dropcombo").append('<img id="imgg" src="images/Packages.png">');
+}
+});
+});
+/*
+$(".draggable").selectable();
+ $('#btn-add').click(function(){
+		$('.draggable .ui-selected ').each( function() {
+			alert($(this).src);
+			$('#mainc').append($(this));
+			$("#imgg").remove();
+		});
+	});
+	$('#btn-remove').click(function(){
+		$('#mainc').each( function() {
+			$('.draggable .ui-selected').append($(this));
+		});
+	});
+
+});*/
+/*function aa(){
+alert();
+}*/
+  </script>
+<body>
+
+<!--Header starts-->
+<div id="header">
+	<div id="logo"><a href="index.html"><img src="images/logo.png"></a></div>
+	<div id="menu">
+		<ul class="shadow">
+		  <li><a href="index.html">Home</a></li>
+                  <li><a href="javascript:void(0);">About us</a></li>
+                  <li><a href="Combo.html">Combos</a></li>
+                  <li><a href="javascript:void(0);">Contact us</a></li>
+		</ul>
+	</div>
+</div>
+<!--Header Ends-->
+<div id="comboside">
+<h3> Click packages to add in combo</h3>
+<div id="product1" class="draggable" name="meenakshi">
+					<a href="javascript:void(0)"><img src="images/shop/tp1.png"></a>
+					<div id="name">Meenakshi amman temple</div>
+					<div id="price">Package:&#8377; 3200</div>
+					<div id="social">Duration:1 day</div>
+					<p><span id="cou"></span></p>
+				</div>
+				<div class="draggable" id="product2">
+					<a href="javascript:void(0)"><img src="images/shop/tp2.png"></a>
+					<div id="name">Megha malai</div>
+					<div id="price">Package:&#8377;2500</div>
+					<div id="social">Duration:2 day</div>
+				</div>
+				<div class="draggable" id="product3">
+					<a href="javascript:void(0)"><img src="images/shop/tp3.png"></a>
+					<div id="name">Mahabalipuram</div>
+					<div id="price">Package:&#8377;5000</div>
+					<div id="social">Duration:4 days</div>
+				</div>
+	
+			
+				<div  class="draggable" id="product4">
+					<a href="javascript:void(0)"><img src="images/shop/tp4.png"></a>
+					<div id="name">Kodaikanal</div>
+					<div id="price">Package:&#8377;320</div>
+					<div id="social">Duration:4 days</div>
+				</div>
+				<div class="draggable" id="product5">
+					<a href="javascript:void(0)"><img src="images/shop/tp5.png"></a>
+					<div id="name">Ooty</div>
+					<div id="price">Packagar:&#8377;320</div>
+					<div id="social">Duration:4 Days</div>
+				</div>
+				<div class="draggable" id="product6">
+					<a href="javascript:void(0)"><img src="images/shop/tp6.png"></a>
+					<div id="name">Pragahdeeswara temple</div>
+					<div id="price">Package:&#8377;320</div>
+					<div id="social">Duration:2 days</div>
+				</div>
+				<div class="draggable" id="product7">
+					<a href="javascript:void(0)"><img src="images/shop/tp7.png"></a>
+					<div id="name">Vaalparai</div>
+					<div id="price">Package:&#8377;320</div>
+					<div id="social">Duration:3 days</div>
+				</div>
+				<div class="draggable" id="product8">
+				<a href="javascript:void(0)">	<img src="images/shop/tp8.png"></a>
+					<div id="name">Yercaud</div>
+					<div id="price">Package:&#8377;320</div>
+					<div id="social">Duration:3 days</div>
+				</div>
+				<div  class="draggable" id="product9">
+				<a href="javascript:void(0)">	<img src="images/shop/tp9.png"></a>
+					<div id="name">Kanniyakumari</div>
+					<div id="price">Package:&#8377;320</div>
+					<div id="social">Duration:3 days</div>
+				</div> 
+</div>
+<div id="mainc">
+	<div id="dropcombo">
+		<h3 id="he">Click to select packages</h3>
+		<img id="imgg" src="images/Packages.png">
+	</div>
+</div>
+<div id="info"> you have selected <p>0</p> packages</div>
+<div id="buybutton">
+	<a href="#">Book Now</a>
+	</div>
+</body>
+</html>

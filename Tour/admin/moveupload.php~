@@ -1,0 +1,56 @@
+<html>
+     <body>
+		
+	 <form method="POST" action="<?php $_PHP_SELF ?>" enctype="multipart/form-data">
+	 	<input type="file" name="myimage">
+	 	<input type="submit" name="submit_image" value="Upload">
+	 </form>
+
+
+<?php
+
+$dbhost = 'localhost';
+$dbuser = 'root';
+$dbpass = 'password';
+$conn = mysql_connect($dbhost, $dbuser, $dbpass);
+
+mysql_select_db('login');
+
+
+
+ if(!$conn )
+{
+  die('Could not connect: ' . mysql_error());
+}
+
+$floder='images/';
+
+$temp = explode(".", $_FILES["file"]["name"]);
+$newfilename ="jts". rand() . '' . end($temp);
+
+
+$tmp_name = $_FILES["myimage"]["tmp_name"];
+$name = "/var/www/html/php/mysql/images/".$newfilename.$_FILES['myimage']['name'];
+$upload=$_FILES['myimage']['name'];
+$tmp_name = $_FILES["myimage"]["tmp_name"];
+echo $name; echo "<br>";
+echo $tmp_name;
+if(move_uploaded_file($tmp_name,$name))
+{
+	$insert_path="INSERT INTO demo (path,image) VALUES('$floder','$upload')";
+	$var=mysql_query($insert_path);
+	
+}
+else{
+	echo "<br>"."error";
+
+}
+
+
+?>
+
+
+
+
+     </body>
+</html>

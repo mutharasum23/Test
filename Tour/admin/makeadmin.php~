@@ -1,0 +1,23 @@
+<?php
+session_start();
+include ("../connection.php");
+if(isset($_POST['makeadmin']))
+{
+  $username=trim($_POST["uid"]);
+   $adminid = trim($_POST['adminid']);
+   $password=trim($_POST['pwd']);
+ $curadmin=$_SESSION["admin"];
+
+$sql = "INSERT INTO admin ".
+       "(admin_id, pwd,user_id,added_by) ".
+       "VALUES('$adminid','$password','$username','$curadmin')";
+$retval = mysql_query( $sql, $conn );
+if(! $retval )
+{
+  die('Could not enter data: ' . mysql_error());
+}
+$_SESSION["message"]="Admin created successfully";
+header("Location:index.php");
+mysql_close($conn);
+}
+?>

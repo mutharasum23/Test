@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head><title>Indo-Tourism</title>
+<link rel="stylesheet" href="css/style.css">
+
+ <!-- load jQuery and the plugin -->
+    <script src="js/jquery-1.7.1.min.js"></script>
+    <script src="js/bjqs-1.3.min.js"></script>
+<link rel="stylesheet" href="css/bjqs.css">
+</head>
+<body>
+
+<!--Header starts-->
+<div id="header">
+<div id="logo"><img src="images/logo.png"></div>
+<div id="menu">
+<ul class="shadow">
+<li><a href="javascript:void(0);">Home</a></li>
+<li><a href="javascript:void(0);">About us</a></li>
+<li><a href="javascript:void(0);">Projects</a></li>
+<li><a href="javascript:void(0);">Contact us</a></li>
+<li><a href="#">Login</a></li>
+</ul>
+
+</div>
+</div>
+
+<!--Header Ends-->
+
+<!--Slider Starts-->
+<div id="slider">
+   <ul class="bjqs">
+          <li><img src="images/banner01.jpg" title="Automatically generated caption"></li>
+          <li><img src="images/banner02.jpg" title="Automatically generated caption"></li>
+          <li><img src="images/banner03.jpg" title="Automatically generated caption"></li>
+        </ul>
+</div>
+</div>
+<!--Slider Ends-->
+<div id="places"></div>
+<div id="bodytext"></div>
+<div id="icons"></div>
+<div id="footer"></div>
+<script>
+  jQuery(document).ready(function($) {
+          
+          $('#banner-slide').bjqs({
+            animtype      : 'slide',
+            height        : 320,
+            width         : 620,
+            responsive    : true,
+            randomstart   : true
+          });
+          
+        });
+
+</script>
+</body>
+</html>
+
+
+
+
